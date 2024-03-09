@@ -1,0 +1,60 @@
+/* Your custom font go here */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Note: Add spaces between classes for better identification */
+
+html {
+	scroll-behavior: smooth;
+}
+
+@layer components {
+  .nav-link {
+		@apply relative font-semibold text-white cursor-pointer text-[20px] md:text-[18px] sm:text-[17px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-yellow-400 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center hidden;
+	}
+
+	/* For Mobile or SmartPhone */
+	.nav-link-mobile {
+		@apply relative mb-[2rem] font-semibold text-white cursor-pointer text-[22px] w-fit md:block after:block after:content-[''] after:absolute after:h-[3px] after:bg-yellow-400 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center;
+	}
+
+	/* Hero Section */
+	.hero-container {
+		@apply relative w-[100%] h-[500px] flex items-center justify-center overflow-hidden;
+  }
+
+  .hero-content {
+		@apply absolute z-10 text-white p-[20px] bg-black;
+  }
+
+  .hero-image {
+    @apply h-[90vh] bg-[url('/images/banner.jpg')] mt-[10vh] bg-cover bg-center;
+  }
+
+	.hero-h1 {
+		@apply items-center justify-center text-center font-bold text-[25px];
+	}
+
+	.hero-p {
+		@apply text-white text-[18px] px-[3rem] pt-[1rem] text-justify;
+	}
+
+	.hero-p-enjoy {
+		@apply text-white text-[16px] px-[3rem] pt-[1rem] text-justify font-semibold;
+	}
+
+	.hero-p-love {
+		@apply text-white text-[18px] text-center font-extrabold;
+	}
+
+	.list-type {
+		@apply list-disc px-[3rem] py-[1rem] text-justify;
+	}
+
+	.footer-p {
+		@apply text-white text-[18px] px-[3rem] pt-[1rem] text-justify;
+	}
+}
