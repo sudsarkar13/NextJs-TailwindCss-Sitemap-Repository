@@ -1,11 +1,12 @@
 {
 	"name": "create-ntss-app",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Creates Next.js + Tailwind CSS + Sitemap starter project template",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/sudsarkar13/nextjs-tailwindcss-sitemap-repository.git"
 	},
+	"private": false,
 	"organization": "technoranch-org",
 	"author": {
 		"name": "Sudeepta Sarkar",
@@ -17,7 +18,21 @@
 		"tailwindcss",
 		"sitemap",
 		"starter",
-		"technoranch",
+		"template",
+		"ntss",
+		"ntss-starter",
+		"ntss-sitemap",
+		"ntss-sitemap-generator",
+		"ntss-sitemap-starter",
+		"ntss-sitemap-starter-kit",
+		"nextjs tailwindcss sitemap starter kit",
+		"nextjs tailwindcss sitemap starter",
+		"nextjs tailwindcss sitemap repository",
+		"nextjs tailwindcss sitemap generator",
+		"nextjs-tailwindcss-sitemap-repository",
+		"nextjs-tailwindcss-sitemap-generator",
+		"nextjs-tailwindcss-sitemap-starter-kit",
+		"nextjs-tailwindcss-sitemap-starter",
 		"sudeepta"
 	],
 	"bin": {
