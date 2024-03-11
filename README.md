@@ -28,7 +28,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Sitemap
 
-For `Sitemap` generation, We have installed `nextjs-sitemap-generator` package in this version. 
+For `Sitemap` generation, We have installed `nextjs-sitemap-generator` package in this version.
 
 ## Learn More
 

@@ -1,32 +1,51 @@
 {
-  "name": "nextjs-tailwindcss-sitemap-repository",
-  "version": "0.1.0",
-  "bin": {
-    "build-webpage": "bin/build.js"
-  },
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "sitemap": "node ./scripts/generate-sitemap.js"
-  },
-  "dependencies": {
-    "next": "14.1.3",
-    "react": "^18",
-    "react-dom": "^18"
-  },
-  "devDependencies": {
-    "@heroicons/react": "^2.1.1",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.4.18",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.3",
-    "nextjs-sitemap-generator": "^1.3.1",
-    "postcss": "^8.4.35",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
-  }
+	"name": "nextjs-tailwindcss-sitemap-repository",
+	"version": "0.0.1",
+	"description": "Next.js + Tailwind CSS + Sitemap starter project template",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sudsarkar13/nextjs-tailwindcss-sitemap-repository"
+	},
+	"organization": "Technoranch",
+	"author": {
+		"name": "Sudeepta Sarkar",
+		"url": "https://github.com/sudsarkar13"
+	},
+	"license": "MIT",
+	"keywords": [
+		"nextjs",
+		"tailwindcss",
+		"sitemap",
+		"starter",
+		"technoranch",
+		"sudeepta"
+	],
+	"bin": {
+		"build-webpage": "bin/build.js"
+	},
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"sitemap": "node ./scripts/generate-sitemap.js"
+	},
+	"dependencies": {
+		"next": "14.1.3",
+		"react": "^18",
+		"react-dom": "^18"
+	},
+	"devDependencies": {
+		"@heroicons/react": "^2.1.1",
+		"@types/node": "^20",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"autoprefixer": "^10.4.18",
+		"eslint": "^8",
+		"eslint-config-next": "14.1.3",
+		"nextjs-sitemap-generator": "^1.3.1",
+		"postcss": "^8.4.35",
+		"tailwindcss": "^3.4.1",
+		"typescript": "^5"
+	}
 }
