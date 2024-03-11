@@ -4,9 +4,9 @@
 	"description": "Creates Next.js + Tailwind CSS + Sitemap starter project template",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/sudsarkar13/nextjs-tailwindcss-sitemap-repository"
+		"url": "git+https://github.com/sudsarkar13/nextjs-tailwindcss-sitemap-repository.git"
 	},
-	"organization": "Technoranch",
+	"organization": "technoranch-org",
 	"author": {
 		"name": "Sudeepta Sarkar",
 		"url": "https://github.com/sudsarkar13"
@@ -20,7 +20,9 @@
 		"technoranch",
 		"sudeepta"
 	],
-	"bin": "./bin/cli.js",
+	"bin": {
+		"create-ntss-app": "bin/cli.js"
+	},
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
