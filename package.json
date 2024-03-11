@@ -35,7 +35,7 @@
 		"sudeepta"
 	],
 	"bin": {
-		"create-ntss-app": "bin/cli2.js"
+		"create-ntss-app": "bin/cli.js"
 	},
 	"scripts": {
 		"dev": "next dev",
