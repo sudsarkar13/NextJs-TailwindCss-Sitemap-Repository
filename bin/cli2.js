@@ -1,53 +1,39 @@
 #!/usr/bin/env node
 
-const fs = require("fs");
-const path = require("path");
-const execSync = require("child_process").execSync;
+const { execSync, readdirSync } = require('child_process');
+const { mkdirSync, copyFileSync } = require('fs');
+const path = require('path'); // Added for path manipulation
 
-const dirName = process.argv[2];
-if (!dirName) {
-  console.log("Please provide a directory name");
+const projectName = process.argv[3]; // Adjusted index for project name
+const templateDir = './bin/project-template'; // Path to template directory
+
+if (!projectName) {
+  console.error('Please provide a project name as the second argument.');
   process.exit(1);
 }
 
-const projectPath = path.join(process.cwd(), dirName);
+console.log(`Creating project ${projectName}...`);
 
-// Create project directory
-fs.mkdirSync(projectPath);
+// Create the project directory
+mkdirSync(projectName);
 
-// Copy files excluding bin and node_modules directories
-const filesToCopy = fs
-  .readdirSync(__dirname)
-  .filter(
-    (file) =>
-      file !== "node_modules" &&
-      file !== "bin" &&
-      file !== "package-lock.json" &&
-      file !== "package.json"
-  );
+// Copy files and folders from the template, excluding "bin" and "node_modules"
+readdirSync(templateDir).forEach((file) => {
+  const filePath = path.join(templateDir, file); // Use path.join for reliable path construction
+  const stats = fs.statSync(filePath);
 
-filesToCopy.forEach((file) => {
-  const sourcePath = path.join(__dirname, file);
-  const destinationPath = path.join(projectPath, file);
-  if (fs.lstatSync(sourcePath).isDirectory()) {
-    fs.mkdirSync(destinationPath);
-    const files = fs.readdirSync(sourcePath);
-    files.forEach((childFile) => {
-      const sourceChildPath = path.join(sourcePath, childFile);
-      const destinationChildPath = path.join(destinationPath, childFile);
-      fs.copyFileSync(sourceChildPath, destinationChildPath);
-    });
+  if (stats.isDirectory()) {
+    if (file !== 'bin' && file !== 'node_modules') {
+      mkdirSync(path.join(projectName, file));
+      readdirSync(filePath).forEach((subFile) => {
+        copyFileSync(path.join(filePath, subFile), path.join(projectName, file, subFile));
+      });
+    }
   } else {
-    fs.copyFileSync(sourcePath, destinationPath);
+    if (file !== 'cli.js') { // Avoid copying the CLI script itself
+      copyFileSync(filePath, path.join(projectName, file));
+    }
   }
 });
 
-// Install dependencies
-execSync("npm install", {
-  cwd: projectPath,
-  stdio: "inherit",
-});
-
-console.log(
-  `🎉 Project successfully created! You can now go to ${projectPath} and start coding`
-);
+console.log(`Project ${projectName} created successfully!`);
