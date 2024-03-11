@@ -1,6 +1,6 @@
 {
 	"name": "nextjs-tailwindcss-sitemap-repository",
-	"version": "0.0.2-0",
+	"version": "0.0.1",
 	"description": "Next.js + Tailwind CSS + Sitemap starter project template",
 	"repository": {
 		"type": "git",
