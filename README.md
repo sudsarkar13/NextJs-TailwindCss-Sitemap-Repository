@@ -1,6 +1,6 @@
 # Create NextJs TailwindCss Sitemap App
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`next-tailwindcss-sitemap-app`](https://github.com/sudsarkar13/next-tailwindcss-sitemap-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`next-tailwindcss-starter`](https://tailwindcss.com/docs/guides/nextjs).
 
 ## Installation
 
