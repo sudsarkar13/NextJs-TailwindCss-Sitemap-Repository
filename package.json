@@ -1,6 +1,6 @@
 {
 	"name": "@sudsarkar13/create-ntss-app",
-	"version": "0.0.2-0",
+	"version": "0.0.2-1",
 	"description": "Creates Next.js + Tailwind CSS + Sitemap starter project template",
 	"repository": {
 		"type": "git",
