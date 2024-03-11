@@ -1,45 +1,4 @@
-const sitemap = require("nextjs-sitemap-generator");
-const path = require("path");
-const fs = require("fs");
-
-sitemap({
-	baseUrl: "https://example.com", // Replace with your base URL or your website's domain
-	pagesDirectory: path.join(__dirname, "../components"),
-	targetDirectory: path.join(__dirname, "../public"),
-	ignoredExtensions: ["js", "map", "json", "xml", "png", "jpg", "jpeg", "svg"],
-	ignoredPaths: ["favicon", "index", "404", "500", "footer", "navigation", "webpages"],
-	extraPaths: [
-		"/",
-		// Add more paths as needed
-	],
-});
-
-// Function to add the stylesheet processing instruction
-function addStylesheetToSitemap() {
-	const sitemapPath = path.join(__dirname, "../public/sitemap.xml");
-	fs.readFile(sitemapPath, "utf8", function (err, data) {
-		if (err) {
-			return console.log(err);
-		}
-		const result = data.replace(
-			'<?xml version="1.0" encoding="UTF-8"?>',
-			'<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="sitemap-stylesheet.xsl"?>'
-		);
-
-		fs.writeFile(sitemapPath, result, "utf8", function (err) {
-			if (err) {
-				return console.log(err);
-			}
-			console.log(`✅ sitemap.xml generated!`);
-		});
-	});
-}
-
-// Call the function to add the stylesheet
-addStylesheetToSitemap();
-
-function createSitemapStylesheet() {
-	const xslContent = `<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
   <xsl:stylesheet
           version="2.0"
           xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -297,17 +256,4 @@ function createSitemapStylesheet() {
           </p>
       </xsl:template>
   
-  </xsl:stylesheet>`;
-
-	const xslPath = path.join(__dirname, "../public/sitemap-stylesheet.xsl");
-
-	fs.writeFile(xslPath, xslContent, function (err) {
-		if (err) {
-			return console.log(err);
-		}
-		console.log("The sitemap-stylesheet.xsl file was saved!");
-	});
-}
-
-// Call function for creating the stylesheet
-createSitemapStylesheet();
+  </xsl:stylesheet>

@@ -54,7 +54,65 @@ html {
 		@apply list-disc px-[3rem] py-[1rem] text-justify;
 	}
 
-	.footer-p {
-		@apply text-white text-[18px] px-[3rem] pt-[1rem] text-justify;
+	/* Do not interfere with the code below */
+	/* Footer */
+
+	.footer {
+		@apply pt-[8rem] pb-[4rem] bg-[#02050a];
+	}
+
+	.footer-1 {
+		@apply grid border-b-[1px] pb-[6rem] border-gray-400 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[80%] mx-auto gap-[3rem];
+	}
+
+	.footer-2 {
+		@apply flex items-center space-x-6;
+	}
+
+	.footer-3 {
+		@apply md:w-[6rem] md:h-[6rem] w-[2.5rem] h-[2.5rem] flex items-center justify-center rounded-full bg-[#0D0C37];
+	}
+
+	.footer-icon {
+		@apply md:w-[3.5rem] md:h-[3.5rem] w-[1.5rem] h-[1.5rem] text-white;
+	}
+
+	.footer-address {
+		@apply text-white text-[25px] mb-[0.2rem] font-semibold;
+	}
+
+	.footer-address-p {
+		@apply text-[17px] w-[90%] text-white opacity-60;
+	}
+
+	.footer-4 {
+		@apply w-[80%] mt-[2rem] mx-auto grid grid-cols-1 md:grid-cols-2 items-center justify-between;
+	}
+
+	.footer-txt {
+		@apply text-[16px] mb-[2rem] md:mb-0 text-white opacity-20;
+	}
+
+	.footer-5 {
+		@apply flex items-center relative space-x-10 ml-[23.5rem];
+	}
+
+	.footer-txt-p {
+		@apply text-[16px] text-white opacity-20;
+	}
+
+	/* Footer for Mobile */
+	@media (max-width: 1024px) {
+		.footer-txt {
+			@apply text-[12px] mb-[2rem] md:mb-0 text-white opacity-20;
+		}
+
+		.footer-txt-p {
+			@apply text-[12px] text-white opacity-20 cursor-pointer;
+		}
+
+		.footer-5 {
+			@apply flex items-center space-x-10 ml-0 justify-center;
+		}
 	}
 }
