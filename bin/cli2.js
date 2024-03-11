@@ -3,7 +3,6 @@
 const fs = require("fs");
 const path = require("path");
 const execSync = require("child_process").execSync;
-const { sync: rimraf } = require("rimraf");
 
 const dirName = process.argv[2];
 if (!dirName) {
